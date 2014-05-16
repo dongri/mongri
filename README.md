@@ -3,7 +3,7 @@ mongoroid
 
 ### Demo
 ------
-[Mongroid on Heroku](http://mongoroid,herokuapp.com)
+[Mongroid on Heroku](http://mongoroid.herokuapp.com)
 
 ### Images
 ------
