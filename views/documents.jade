@@ -1,0 +1,76 @@
+extends layout
+
+block content
+  h1.page-header= document
+    button.right-button.button(onclick="location.href='/collections/#{document}/new'") Add Document
+  div.main_content
+    form(method='get', action="/collections/#{document}")
+      input#p-query(type='hidden', name='query', value='')
+      input#p-sort(type='hidden', name='sort', value='')
+      input#p-skip(type='hidden', name='skip', value='')
+      input#p-limit(type='hidden', name='limit', value='')
+      div.query
+        | find({
+        span#query(spellcheck="false" contenteditable="true" data-type="hash" data-name="query")
+        | }).
+        | sort(
+        span#sort(spellcheck="false" contenteditable="true" data-type="hash" data-name="sort")
+        | ).
+        | skip(
+        span#skip(spellcheck="false" contenteditable="true" data-type="hash" data-name="skip") 0
+        | ).
+        | limit(
+        span#limit(spellcheck="false" contenteditable="true" data-type="hash" data-name="limit") 10
+        |)
+        input#name(type='hidden', value=document)
+      div.buttons
+        button#run-button.button Run
+      ul.documents
+        - for (var i in docs)
+            li
+              a(href="/collections/#{document}/#{ids[i]}") #{docs[i]}
+      if hasPrevious === true
+        button#previous-button.left-button.button Previous
+      if hasNext === true
+        button#next-button.right-button.button Next
+block js
+  script.
+    $(function () {
+      function setParams(page){
+        var query = $('#query').html();
+        var sort  = $('#sort').html();
+        var skip  = $('#skip').html();
+        var limit = $('#limit').html();
+        if (page === 'next'){
+          skip = parseInt(skip) + parseInt(limit);
+        }
+        if (page === 'previous') {
+          skip = parseInt(skip) - parseInt(limit);
+          if (skip < 0){
+            skip = 0;
+          }
+        }
+        $('#p-query').val(query);
+        $('#p-sort').val(sort);
+        $('#p-skip').val(skip);
+        $('#p-limit').val(limit);
+      }
+      $(window).load(function () {
+        $('#query').html(decodeURIComponent(urlArg("query")));
+        $('#sort').html(decodeURIComponent(urlArg("sort")));
+        $('#skip').html(decodeURIComponent(urlArg("skip")));
+        $('#limit').html(decodeURIComponent(urlArg("limit")));
+      });
+      $(document).on('click', '#run-button', function(event) {
+        setParams('');
+        this.submit();
+      });
+      $(document).on('click', '#next-button', function(event) {
+        setParams('next');
+        this.submit();
+      });
+      $(document).on('click', '#previous-button', function(event) {
+        setParams('previous');
+        this.submit();
+      });
+    });

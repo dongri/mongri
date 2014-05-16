@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  h4.page-header
+    a(href="/collections/#{document}")= document
+    | / #{document_id}
+  div.main_content
+    form(method='POST', action="/collections/#{document}/#{document_id}")
+      input#action-method(type='hidden', name='_method', value='POST' )
+      textarea#document(name='doc', style='display:none;')
+        | #{doc}
+      button#delete-button.left-button.danger-button.button Delete Document
+      button#save-button.right-button.button Save Changes
+block js
+  script(src='/javascripts/codemirror/mode/javascript/javascript.js')
+  script.
+    $(function () {
+      CodeMirror.fromTextArea(document.getElementById('document'), {
+          mode: "application/ld+json",
+          theme: "origami",
+          matchBrackets: true,
+          autoCloseBrackets: true,
+          lineWrapping: true,
+          lineNumbers: false
+      });
+      $(document).on('click', '#delete-button', function(event) {
+        var answer = confirm('Are you sure?');
+        if (answer){
+          $('#action-method').val('DELETE');
+          this.submit();
+        }else{
+          return false;
+        }
+      });
+    });

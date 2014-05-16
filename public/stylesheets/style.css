@@ -1,0 +1,211 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+header {
+  height: 50px;
+  background: black;
+  color: white;
+}
+
+header .logo {
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+footer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.content-left {
+  float: left;
+  width: 15%;
+  background: white;
+  padding: 10px;
+}
+
+.content-left h3{
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.content-left h3 a{
+  text-decoration:none;
+}
+
+.content-right {
+  display: inline-block;
+  padding: 10px;
+  width: 75%;
+}
+
+h1.page-header{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h4.page-header{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.document{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #EFEFEF;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border-bottom: 1px solid #EEE;
+  list-style: none;
+  word-wrap: break-word;
+}
+
+.CodeMirror{
+  height: auto !important;
+}
+
+ul.collections{
+  border: 1px solid #DDD;
+  list-style: none;
+  line-height: 2.5em;
+  border-radius: 5px;
+}
+ul.collections li{
+  border-bottom: 1px solid #DDD;
+  padding-left: 10px;
+}
+ul.collections a{
+  display: block;
+  text-decoration:none;
+  color: #222;
+}
+ul.collections li:hover {
+  background:#E0FFFF;
+}
+
+ul.documents{
+  border: 1px solid #DDD;
+  list-style: none;
+  line-height: 1.5em;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+ul.documents li{
+  border-bottom: 1px solid #DDD;
+  padding: 10px;
+  max-height: 58px;
+  overflow: hidden;
+}
+ul.documents a{
+  display: block;
+  text-decoration:none;
+  font-size: 12px;
+  color: #222;
+}
+ul.documents li:hover {
+  background:#E0FFFF;
+}
+
+.query{
+  font-size: 20px;
+  padding: 15px;
+  background: black;
+  color: #00c123;
+  border-radius: 10px 10px 0 0;
+}
+
+#query{
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  margin: 0 .4em;
+  padding: 0 .3em;
+  position: relative;
+  min-width: 3em;
+  color: white;
+}
+
+#sort, #skip, #limit{
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  margin: 0 .4em;
+  position: relative;
+  min-width: 1.0em;
+  color: white;
+}
+
+[contentEditable=true]:focus {
+  outline: none;
+}
+
+.buttons{
+  box-shadow: rgba(255, 255, 255, 0.05) 0 1px inset;
+  background: #363636;
+  padding: .6em .7em;
+  font-size: .75em;
+  color: #999;
+  border-top: 1px solid #1c1c1c;
+  height: 30px;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 20px;
+}
+
+.button{
+  text-shadow: #151515 0 1px 1px;
+  margin-right: .6em;
+  padding: .45em .8em;
+  /* line-height: 1.2em; */
+  /* font-size: 12px; */
+  /* background: none; */
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  /* border-radius: 0.4em; */
+  -moz-box-shadow: rgba(255, 255, 255, 0.08) 0 1px 0 inset, rgba(255, 255, 255, 0.08) 0 1px;
+  /* -webkit-box-shadow: rgba(255, 255, 255, 0.08) 0 1px 0 inset, rgba(255, 255, 255, 0.08) 0 1px; */
+  box-shadow: rgba(255, 255, 255, 0.08) 0 1px 0 inset, rgba(255, 255, 255, 0.08) 0 1px;
+  /* border: 1px solid #292929; */
+  color: inherit;
+
+  padding: .45em 1em;
+  margin-right: 0;
+  color: #444;
+  text-shadow: rgba(255, 255, 255, 0.3) 0 1px;
+  -moz-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+  background-color: rgba(255, 255, 255, 0.7);
+
+}
+
+#run-button{
+  float: right;
+}
+
+.right-button{
+  float: right;
+}
+
+.danger-button{
+  color: red;
+}

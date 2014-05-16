@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/codemirror.css')
+    link(rel='stylesheet', href='/javascripts/codemirror/theme/origami.css')
+    link(rel='stylesheet', href='/stylesheets/pace.css')
+    script(src='/javascripts/jquery-2.1.1.min.js')
+    script(src='/javascripts/codemirror/codemirror.js')
+    script(src='/javascripts/pace.min.js')
+    script(src='/javascripts/mongoroid.js')
+  body
+    header
+      div.logo
+        | Mongoroid
+    div.content-left
+      h3
+        a(href="/collections") #{db_name}
+    div.content-right
+      block content
+    footer
+      | &nbsp;
+    block js
