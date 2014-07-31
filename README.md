@@ -3,7 +3,7 @@ mongri
 
 ### Demo
 ------
-[Mongroid on Heroku](http://mongri.herokuapp.com)
+[Mongri on Heroku](http://mongri.herokuapp.com)
 
 ### Use Mongri
 ------
