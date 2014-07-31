@@ -16,9 +16,10 @@ $ node app.js
 
 ### Images
 ------
-![Collections](https://raw.github.com/dongri/mongoroid/master/public/images/demo/collections.png)
-![Search Query](https://raw.github.com/dongri/mongoroid/master/public/images/demo/query.png)
-![Document](https://raw.github.com/dongri/mongoroid/master/public/images/demo/document.png)
+![Collections](https://raw.github.com/dongri/mongri/master/public/images/demo/collections.png)
+![Collections](https://raw.github.com/dongri/mongri/master/public/images/demo/collections.png)
+![Search Query](https://raw.github.com/dongri/mongri/master/public/images/demo/query.png)
+![Document](https://raw.github.com/dongri/mongri/master/public/images/demo/document.png)
 
 ### Author
 ------

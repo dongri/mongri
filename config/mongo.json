@@ -16,7 +16,7 @@
     "uri": "mongodb://localhost:27017/development",
     "opts": {
       "replset": {
-        "rs_name": "mongoroid-repl",
+        "rs_name": "mongri-repl",
         "readPreference": "secondaryPreferred",
         "poolsize": 20,
         "socketOptions": {
@@ -29,7 +29,7 @@
     "uri": "mongodb://localhost:27017/test",
     "opts": {
       "replset": {
-        "rs_name": "mongoroid-repl",
+        "rs_name": "mongri-repl",
         "readPreference": "secondaryPreferred",
         "poolsize": 20,
         "socketOptions": {
@@ -42,7 +42,7 @@
     "uri": "mongodb://localhost:27017/production",
     "opts": {
       "replset": {
-        "rs_name": "mongoroid-repl",
+        "rs_name": "mongri-repl",
         "readPreference": "secondaryPreferred",
         "poolsize": 20,
         "socketOptions": {
