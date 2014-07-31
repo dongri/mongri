@@ -1,15 +1,15 @@
-mongoroid
+mongri
 =========
 
 ### Demo
 ------
-[Mongroid on Heroku](http://mongoroid.herokuapp.com)
+[Mongroid on Heroku](http://mongri.herokuapp.com)
 
-### Use Mongoroid
+### Use Mongri
 ------
 ```
-$ git clone git@github.com:dongri/mongoroid.git
-$ cd mongoroid
+$ git clone git@github.com:dongri/mongri.git
+$ cd mongri
 $ npm install
 $ node app.js
 ```

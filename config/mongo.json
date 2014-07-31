@@ -3,7 +3,7 @@
     "uri": "mongodb://localhost:27017/local",
     "opts": {
       "replset": {
-        "rs_name": "mongoroid-repl",
+        "rs_name": "mongri-repl",
         "readPreference": "secondaryPreferred",
         "poolsize": 20,
         "socketOptions": {
