@@ -52,6 +52,7 @@ var document = require('./routes/document');
 
 app.get('/', routes.index);
 app.get('/collections', collection.collections);
+app.get('/collections/:collection/drop', collection.dropCollection);
 app.get('/collections/:document', document.documents);
 app.get('/collections/:document/new', document.newDocument);
 app.post('/collections/:document', document.postDocument);

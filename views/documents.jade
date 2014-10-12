@@ -2,9 +2,13 @@ extends layout
 
 block content
   h1.page-header= document
-    button.right-button.button(onclick="location.href='/collections/#{document}/new'") Add Document
+    div.right-button
+      button.button.danger-button(onclick="dropCollection('#{document}');") Drop Collection
+      | &nbsp;&nbsp;
+      button.button(onclick="location.href='/collections/#{document}/new'") Add Document
+
   div.main_content
-    form(method='get', action="/collections/#{document}")
+    form(method='get', action="/collections/#{document}", id="query_form")
       input#p-query(type='hidden', name='query', value='')
       input#p-sort(type='hidden', name='sort', value='')
       input#p-skip(type='hidden', name='skip', value='')
@@ -56,10 +60,22 @@ block js
         $('#p-limit').val(limit);
       }
       $(window).load(function () {
-        $('#query').html(decodeURIComponent(urlArg("query")));
-        $('#sort').html(decodeURIComponent(urlArg("sort")));
-        $('#skip').html(decodeURIComponent(urlArg("skip")));
-        $('#limit').html(decodeURIComponent(urlArg("limit")));
+        urlQuery = urlArg("query");
+        urlSort  = urlArg("sort");
+        urlSkip  = urlArg("skip");
+        urlLimit = urlArg("limit");
+        if (urlQuery != null) {
+          $('#query').html(decodeURIComponent(urlQuery));
+        }
+        if (urlSort != null) {
+          $('#sort').html(decodeURIComponent(urlSort));
+        }
+        if (urlSkip != null) {
+          $('#skip').html(decodeURIComponent(urlSkip));
+        }
+        if (urlLimit != null) {
+          $('#limit').html(decodeURIComponent(urlLimit));
+        }
       });
       $(document).on('click', '#run-button', function(event) {
         setParams('');
@@ -78,4 +94,12 @@ block js
         var text = (e.originalEvent || e).clipboardData.getData('text/plain') || prompt('Paste something..');
         document.execCommand('insertText', false, text);
       });
+      
+      $('#query_form').on('keydown', function(e) {
+        if(e.keyCode == 13 && e.metaKey) {
+          setParams('');
+          this.submit();
+        }
+      });
+
     });

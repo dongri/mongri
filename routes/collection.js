@@ -20,3 +20,11 @@ exports.collections = function(req, res){
     }
   });
 };
+
+exports.dropCollection = function(req, res) {
+  var collectionName = req.params.collection;
+  var collection = mongoose.connection.db.collection(collectionName);
+  collection.drop(function(err) {
+    res.redirect("/collections");
+  });
+};
