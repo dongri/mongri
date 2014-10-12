@@ -23,4 +23,4 @@ $ node app.js
 
 ### Author
 ------
-Dongri Jin - [dongri.at](http://dongri.at) - [@dongriab](http://twitter.com/dongriab)
+Dongri Jin - [dongri.at](http://dongri.at) - [@dongriat](http://twitter.com/dongriat)
