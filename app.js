@@ -8,6 +8,7 @@ var favicon        = require('serve-favicon');
 var bodyParser     = require('body-parser');
 var morgan         = require('morgan');
 var methodOverride = require('method-override');
+var auth           = require('basic-auth');
 
 var routes = require('./routes');
 var http = require('http');
@@ -34,6 +35,22 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
+app.use(function(req, res, next) {
+  if(mongo.auth.enabled) {
+    var credentials = auth(req);
+    if(!credentials || !(mongo.auth.name === credentials.name &&
+        mongo.auth.pass === credentials.pass)) {
+      res.writeHead(401, {
+        'WWW-Authenticate': 'Basic realm="Welcome to Mongri"'
+      });
+      res.end();
+    } else {
+      next();
+    }
+  } else {
+    next();
+  }
+});
 app.use(morgan('dev'));
 app.use(bodyParser());
 app.use(bodyParser.json());
