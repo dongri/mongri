@@ -1,4 +1,9 @@
 {
+  "auth": {
+    "enabled": true,
+    "name": "mongri",
+    "pass": "s3cr37"
+  },
   "local": {
     "uri": "mongodb://localhost:27017/local",
     "opts": {
