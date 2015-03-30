@@ -122,7 +122,6 @@ app.get('/auth/google/callback',
   function(req, res) {
     email = req.user.emails[0].value
     domain = email.split("@")[1]
-    console.log(domain)
     if (domain != auth.google.allow_domain){
       res.redirect('/logout');
     } else {
