@@ -1,8 +1,14 @@
-extends layout
-
-block content
-  h1.page-header Collections
-  ul.collections
-    - for (var i in collections)
-        li
-          a(href="/collections/#{collections[i]}") #{collections[i]}
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    header
+      div.logo
+        | #{logoTitle}
+    h1.signin_with_google
+      a(href="/auth/google")
+        img(src="/images/google.png")
+    footer
+      | &nbsp;

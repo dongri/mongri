@@ -195,7 +195,6 @@ ul.documents li:hover {
   background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
   background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
   background-color: rgba(255, 255, 255, 0.7);
-
 }
 
 #run-button{
@@ -208,4 +207,13 @@ ul.documents li:hover {
 
 .danger-button{
   color: red;
+}
+
+.signin_with_google{
+  margin: 50px;
+  text-align: center;
+}
+
+.signin_with_google img{
+  height: 50px;
 }

@@ -4,5 +4,13 @@
  */
 
 exports.index = function(req, res){
-  res.redirect('/collections');
+  if (auth.google.enabled){
+    if (req.isAuthenticated()){
+      res.redirect("/collections");
+    }else{
+      res.render("index")
+    }
+  }else{
+    res.redirect("/collections");
+  }
 };

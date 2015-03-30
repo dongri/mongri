@@ -1,37 +1,6 @@
 {
-  "auth": {
-    "enabled": true,
-    "name": "mongri",
-    "pass": "s3cr37"
-  },
-  "local": {
-    "uri": "mongodb://localhost:27017/local",
-    "opts": {
-      "replset": {
-        "rs_name": "mongri-repl",
-        "readPreference": "secondaryPreferred",
-        "poolsize": 20,
-        "socketOptions": {
-          "keepAlive": 1
-        }
-      }
-    }
-  },
   "development": {
     "uri": "mongodb://localhost:27017/development",
-    "opts": {
-      "replset": {
-        "rs_name": "mongri-repl",
-        "readPreference": "secondaryPreferred",
-        "poolsize": 20,
-        "socketOptions": {
-          "keepAlive": 1
-        }
-      }
-    }
-  },
-  "test": {
-    "uri": "mongodb://localhost:27017/test",
     "opts": {
       "replset": {
         "rs_name": "mongri-repl",

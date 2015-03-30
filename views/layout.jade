@@ -13,10 +13,13 @@ html
   body
     header
       div.logo
-        | Mongri
+        | #{logoTitle}
     div.content-left
       h3
         a(href="/collections") #{db_name}
+      if isAuthenticated
+        h3
+          a(href="/logout") Logout
     div.content-right
       block content
     footer
