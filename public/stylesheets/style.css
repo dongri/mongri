@@ -122,7 +122,10 @@ ul.documents a{
 ul.documents li:hover {
   background:#E0FFFF;
 }
-
+ul.collections span.count {
+  float: right;
+  margin-right: 10px;
+}
 .query{
   font-size: 20px;
   padding: 15px;

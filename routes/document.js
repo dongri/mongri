@@ -12,6 +12,14 @@ exports.documents = function(req, res) {
   var limit    = req.query.limit;
   if (!query){
     query='';
+  } else {
+    var token = query.split(":");
+    if (token[0] == "_id"){
+      if (!token[1].match(/ObjectId/)) {
+        value = "ObjectId("+token[1]+")";
+        query = "_id:" + value;
+      }
+    }
   }
   if (!sort){
     sort = "_id:-1";
@@ -56,10 +64,11 @@ exports.documents = function(req, res) {
 
 exports.newDocument = function(req, res) {
   var document = req.params.document;
+  var id = mongoose.Types.ObjectId();
   res.render('new_document', {
     title: document,
     db_name: mongoose.connection.db.databaseName,
-    doc: bson.toString({}),
+    doc: bson.toString({_id:id}),
     document: document
   });
 };

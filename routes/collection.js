@@ -1,4 +1,5 @@
 var _ = require('lodash');
+var async = require('async');
 var mongoose  = require('mongoose');
 
 exports.collections = function(req, res){
@@ -7,15 +8,24 @@ exports.collections = function(req, res){
       throw new Error(error);
     } else {
       collectionNames = _.reject(collectionNames, function(collectionName){
-        return collectionName.name.match(/system\./);
+        return collectionName.name.match(/system\./) || collectionName.name.match(/-system/);
       });
       var names = collectionNames.map(function(collectionName){
         return collectionName.name.replace(mongoose.connection.db.databaseName+".","");
       });
-      res.render('collections', {
-        title: 'Collections',
-        db_name: mongoose.connection.db.databaseName,
-        collections: names
+      counts = []
+      async.eachSeries(names, function(n, cb) {
+        mongoose.connection.db.collection(n).count({},function(err, count) {
+          counts.push(count);
+          cb();
+        });
+      }, function(err) {
+        res.render('collections', {
+          title: 'Collections',
+          db_name: mongoose.connection.db.databaseName,
+          collections: names,
+          counts: counts
+        });
       });
     }
   });
