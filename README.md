@@ -17,10 +17,12 @@ $ node app.js
 ### Images
 ------
 ![Collections](https://raw.github.com/dongri/mongri/master/public/images/demo/collections.png)
-![Collections](https://raw.github.com/dongri/mongri/master/public/images/demo/collections.png)
-![Search Query](https://raw.github.com/dongri/mongri/master/public/images/demo/query.png)
+![Documents](https://raw.github.com/dongri/mongri/master/public/images/demo/documents.png)
 ![Document](https://raw.github.com/dongri/mongri/master/public/images/demo/document.png)
+![New](https://raw.github.com/dongri/mongri/master/public/images/demo/new.png)
+![Query](https://raw.github.com/dongri/mongri/master/public/images/demo/query.png)
+![Signin](https://raw.github.com/dongri/mongri/master/public/images/demo/signin.png)
 
 ### Author
 ------
-Dongri Jin - [dongri.at](http://dongri.at) - [@dongriat](http://twitter.com/dongriat)
+Dongri Jin - [@dongriat](http://twitter.com/dongriat)
