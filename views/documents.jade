@@ -3,8 +3,9 @@ extends layout
 block content
   h1.page-header= document
     div.right-button
-      button.button.danger-button(onclick="dropCollection('#{document}');") Drop Collection
-      | &nbsp;&nbsp;
+      if dropCollection === true
+        button.button.danger-button(onclick="dropCollection('#{document}');") Drop Collection
+        | &nbsp;&nbsp;
       button.button(onclick="location.href='/collections/#{document}/new'") Add Document
 
   div.main_content

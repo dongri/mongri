@@ -92,6 +92,7 @@ app.use(function(req, res, next) {
 app.use(function(req, res, next){
   res.locals.isAuthenticated = req.isAuthenticated();
   res.locals.logoTitle = config.title;
+  res.locals.dropCollection = config.drop_collection;
   next();
 });
 
