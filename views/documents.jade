@@ -66,16 +66,16 @@ block js
         urlSkip  = urlArg("skip");
         urlLimit = urlArg("limit");
         if (urlQuery != null) {
-          $('#query').html(decodeURIComponent(urlQuery));
+          $('#query').html(decodeURIComponent(urlQuery.replace(/\+/g, '%20')));
         }
         if (urlSort != null) {
-          $('#sort').html(decodeURIComponent(urlSort));
+          $('#sort').html(decodeURIComponent(urlSort.replace(/\+/g, '%20')));
         }
         if (urlSkip != null) {
-          $('#skip').html(decodeURIComponent(urlSkip));
+          $('#skip').html(decodeURIComponent(urlSkip.replace(/\+/g, '%20')));
         }
         if (urlLimit != null) {
-          $('#limit').html(decodeURIComponent(urlLimit));
+          $('#limit').html(decodeURIComponent(urlLimit.replace(/\+/g, '%20')));
         }
       });
       $(document).on('click', '#run-button', function(event) {
