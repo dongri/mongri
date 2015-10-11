@@ -82,11 +82,11 @@ exports.postDocument = function(req, res) {
   } catch (err) {
     throw new Error(error);
   }
-  col.insert(docBSON, function(err, docs) {
+  col.insert(docBSON, function(err, result) {
     if (err) {
       throw new Error(err);
     } else {
-      doc = docs[0];
+      doc = result.ops[0];
       return res.redirect('/collections/'+document+'/'+doc._id)
     }
   });
@@ -134,7 +134,7 @@ exports.documentUpdate = function(req, res) {
   } catch (err) {
     throw new Error(err);
   }
-  col.findAndModify({_id:ObjectId(id)}, [], docBSON, {new: true, upsert:true}, function(err, doc) {
+  col.findAndModify({_id:ObjectId(id)}, [], docBSON, {new: true, upsert:true}, function(err, updatedDoc) {
     if (err) {
       throw new Error(err);
     } else {
@@ -142,7 +142,7 @@ exports.documentUpdate = function(req, res) {
         title: document,
         db_name: mongoose.connection.db.databaseName,
         document: document,
-        doc: bson.toString(doc),
+        doc: doc,
         document_id: id
       });
     }
