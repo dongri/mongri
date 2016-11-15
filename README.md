@@ -21,6 +21,8 @@ $ cd mongri
 $ docker-compose up -d
 ```
 
+[http://localhost:3000/collections](http://localhost:3000/collections)
+
 ### Images
 ------
 ![Collections](https://raw.github.com/dongri/mongri/master/public/images/demo/collections.png?cache)
