@@ -1,6 +1,6 @@
 {
   "development": {
-    "uri": "mongodb://localhost:27017/development",
+    "uri": "mongodb://192.168.10.103:27017/mongri-develop",
     "opts": {
       "replset": {
         "rs_name": "mongri-repl",
@@ -13,7 +13,7 @@
     }
   },
   "production": {
-    "uri": "mongodb://localhost:27017/production",
+    "uri": "mongodb://192.168.10.103:27017/mongri-production",
     "opts": {
       "replset": {
         "rs_name": "mongri-repl",

@@ -1,0 +1,10 @@
+mongri:
+  container_name: mongri
+  build: .
+  dockerfile: Dockerfile
+  volumes:
+    - .:/app/src
+  log_opt:
+    max-size: "500k"
+  ports:
+    - "3000:3000"
