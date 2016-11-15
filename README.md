@@ -14,6 +14,13 @@ $ npm install
 $ node app.js
 ```
 
+### Docker
+
+```
+$ cd mongri
+$ docker-compose up -d
+```
+
 ### Images
 ------
 ![Collections](https://raw.github.com/dongri/mongri/master/public/images/demo/collections.png?cache)
@@ -31,4 +38,4 @@ $ node app.js
 
 ### Author
 ------
-Dongri Jin - [@dongriat](http://twitter.com/dongriat)
+Dongri Jin - [@dongrify](http://twitter.com/dongrify)
