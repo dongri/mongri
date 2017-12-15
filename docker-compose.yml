@@ -4,6 +4,8 @@ mongri:
   dockerfile: Dockerfile
   volumes:
     - .:/app/src
+  environment:
+    - NODE_ENV=docker
   log_opt:
     max-size: "500k"
   ports:

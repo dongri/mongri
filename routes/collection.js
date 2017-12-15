@@ -3,7 +3,7 @@ var async = require('async');
 var mongoose  = require('mongoose');
 
 exports.collections = function(req, res){
-  mongoose.connection.db.collectionNames(function(error, collectionNames) {
+  mongoose.connection.db.listCollections().toArray(function(error, collectionNames) {
     if (error) {
       throw new Error(error);
     } else {
