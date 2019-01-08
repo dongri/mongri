@@ -1,5 +1,5 @@
 FROM node:8.9.3-alpine
-MAINTAINER Dongri Jin <dongrify@gmail.com>
+LABEL maintainer "Dongri Jin <dongrify@gmail.com>"
 RUN npm install -g nodemon@1.3.7
 RUN mkdir -p /app/src
 ADD package.json /app/package.json

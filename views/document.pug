@@ -2,10 +2,10 @@ extends layout
 
 block content
   h4.page-header
-    a(href="/collections/#{document}")= document
+    a(href=`/collections/${document}`)= document
     | / #{document_id}
   div.main_content
-    form(method='POST', action="/collections/#{document}/#{document_id}")
+    form(method='POST', action=`/collections/${document}/${document_id}`)
       input#action-method(type='hidden', name='_method', value='POST' )
       textarea#document(name='doc', style='display:none;')
         | #{doc}

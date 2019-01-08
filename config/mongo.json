@@ -3,14 +3,14 @@
     "uri": "mongodb://localhost:27017/mongri-develop",
     "opts": {
       "poolSize": 20,
-      "useMongoClient": true
+      "useNewUrlParser": true
     }
   },
   "docker": {
     "uri": "mongodb://172.16.10.50:27017/mongri-develop",
     "opts": {
       "poolSize": 20,
-      "useMongoClient": true
+      "useNewUrlParser": true
     }
   },
   "production": {
@@ -20,7 +20,7 @@
       "server": {
         "ssl": true
       },
-      "useMongoClient": true
+      "useNewUrlParser": true
     }
   }
 }

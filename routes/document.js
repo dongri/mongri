@@ -86,8 +86,8 @@ exports.postDocument = function(req, res) {
     if (err) {
       throw new Error(err);
     } else {
-      doc = docs[0];
-      return res.redirect('/collections/'+document+'/'+doc._id)
+      var insertedId = docs.ops[0]._id;
+      return res.redirect('/collections/' + document + '/' + insertedId)
     }
   });
 };
@@ -142,7 +142,7 @@ exports.documentUpdate = function(req, res) {
         title: document,
         db_name: mongoose.connection.db.databaseName,
         document: document,
-        doc: bson.toString(doc),
+        doc: bson.toString(doc.value),
         document_id: id
       });
     }

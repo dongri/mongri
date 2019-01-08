@@ -1,23 +1,23 @@
 {
-  "name": "Mongri",
+  "name": "mongri",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
-    "basic-auth": "^1.0.0",
-    "body-parser": "1.2.0",
-    "express": "4.2.0",
-    "cookie-session": "1.0.2",
-    "jade": "1.3.1",
-    "lodash": "2.4.1",
-    "method-override": "1.0.0",
-    "mongoose": "4.13.7",
-    "morgan": "1.0.1",
-    "serve-favicon": "2.0.0",
-    "passport": "0.2.1",
-    "passport-google-oauth": "0.2.0",
-    "async": "0.9.0"
+    "async": "2.6.1",
+    "basic-auth": "2.0.1",
+    "body-parser": "1.18.3",
+    "cookie-session": "1.3.2",
+    "express": "4.16.4",
+    "pug": "2.0.3",
+    "lodash": "4.17.11",
+    "method-override": "3.0.0",
+    "mongoose": "5.4.2",
+    "morgan": "1.9.1",
+    "passport": "0.4.0",
+    "passport-google-oauth": "1.0.0",
+    "serve-favicon": "2.5.0"
   }
 }

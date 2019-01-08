@@ -4,12 +4,12 @@ block content
   h1.page-header= document
     div.right-button
       if dropCollection === true
-        button.button.danger-button(onclick="dropCollection('#{document}');") Drop Collection
+        button.button.danger-button(onclick=`dropCollection('${document}');`) Drop Collection
         | &nbsp;&nbsp;
-      button.button(onclick="location.href='/collections/#{document}/new'") Add Document
+      button.button(onclick=`location.href='/collections/${document}/new'`) Add Document
 
   div.main_content
-    form(method='get', action="/collections/#{document}", id="query_form")
+    form(method='get', action=`/collections/${document}`, id="query_form")
       input#p-query(type='hidden', name='query', value='')
       input#p-sort(type='hidden', name='sort', value='')
       input#p-skip(type='hidden', name='skip', value='')
@@ -33,7 +33,7 @@ block content
       ul.documents
         - for (var i in docs)
             li
-              a(href="/collections/#{document}/#{ids[i]}") #{docs[i]}
+              a(href=`/collections/${document}/${ids[i]}`) #{docs[i]}
       if hasPrevious === true
         button#previous-button.left-button.button Previous
       if hasNext === true

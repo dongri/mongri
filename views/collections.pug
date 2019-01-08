@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1.page-header Collections
+  ul.collections
+    - for (var i in collections)
+      li
+        a(href=`/collections/${collections[i]}`) #{collections[i]}
+          span.count #{counts[i]}

@@ -2,9 +2,9 @@ extends layout
 
 block content
   h4.page-header
-    a(href="/collections/#{document}")= document
+    a(href=`/collections/${document}`)= document
   div.main_content
-    form(method='post', action="/collections/#{document}/")
+    form(method='post', action=`/collections/${document}/`)
       textarea#document(name='doc', style='display:none;')
         | #{doc}
       button#save-button.right-button.button Save Document
