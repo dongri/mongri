@@ -15,11 +15,7 @@
   },
   "heroku": {
     "opts": {
-      "autoIndex": false,
-      "reconnectTries": 100,
-      "reconnectInterval": 500,
-      "poolSize": 10,
-      "bufferMaxEntries": 0,
+      "poolSize": 20,
       "useNewUrlParser": true
     }
   },
