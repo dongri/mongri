@@ -13,6 +13,16 @@
       "useNewUrlParser": true
     }
   },
+  "heroku": {
+    "opts": {
+      "useMongoClient": true,
+      "autoIndex": false,
+      "reconnectTries": 100,
+      "reconnectInterval": 500,
+      "poolSize": 10,
+      "bufferMaxEntries": 0
+    }
+  },
   "production": {
     "uri": "mongodb://localhost:27017/mongri-production",
     "opts": {
