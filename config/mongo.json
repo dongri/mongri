@@ -19,7 +19,8 @@
       "reconnectTries": 100,
       "reconnectInterval": 500,
       "poolSize": 10,
-      "bufferMaxEntries": 0
+      "bufferMaxEntries": 0,
+      "useNewUrlParser": true
     }
   },
   "production": {
