@@ -19,6 +19,14 @@
       "useNewUrlParser": true
     }
   },
+  "docdb": {
+    "uri": "mongodb://{user}:{password}@localhost:27017/{docdb}",
+    "opts": {
+      "poolSize": 20,
+      "useNewUrlParser": true,
+      "ssl": true
+    }
+  },
   "production": {
     "uri": "mongodb://localhost:27017/mongri-production",
     "opts": {
