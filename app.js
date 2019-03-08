@@ -11,7 +11,7 @@ var morgan         = require('morgan');
 var methodOverride = require('method-override');
 var basicAuth      = require('basic-auth');
 var passport       = require('passport');
-var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+var GoogleStrategy = require('passport-google-oauth2').Strategy;
 
 var http = require('http');
 var path = require('path');
