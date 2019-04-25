@@ -1,6 +1,6 @@
-FROM node:8.9.3-alpine
+FROM node:12.0.0-alpine
 LABEL maintainer "Dongri Jin <dongrify@gmail.com>"
-RUN npm install -g nodemon@1.3.7
+RUN npm install -g nodemon@1.18.11
 RUN mkdir -p /app/src
 ADD package.json /app/package.json
 WORKDIR /app/src

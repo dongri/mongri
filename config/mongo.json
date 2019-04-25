@@ -7,7 +7,7 @@
     }
   },
   "docker": {
-    "uri": "mongodb://172.16.10.50:27017/mongri-develop",
+    "uri": "mongodb://mongo:27017/mongri-develop",
     "opts": {
       "poolSize": 20,
       "useNewUrlParser": true

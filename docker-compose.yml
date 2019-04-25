@@ -1,12 +1,26 @@
-mongri:
-  container_name: mongri
-  build: .
-  dockerfile: Dockerfile
-  volumes:
-    - .:/app/src
-  environment:
-    - NODE_ENV=docker
-  log_opt:
-    max-size: "500k"
-  ports:
-    - "127.0.0.1:3000:3000"
+version: "3"
+
+services:
+  mongo:
+    container_name: mongo
+    build:
+      context: .
+      dockerfile: Dockerfile.mongo
+    volumes:
+      - ./data:/data
+    ports:
+      - "127.0.0.1:27017:27017"
+  mongri:
+    container_name: mongri
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app/src
+    environment:
+      - NODE_ENV=docker
+    logging:
+      options:
+        max-size: "500k"
+    ports:
+      - "127.0.0.1:3000:3000"
