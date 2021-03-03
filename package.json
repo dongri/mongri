@@ -20,6 +20,7 @@
     "passport-google-oauth2": "0.2.0",
     "serve-favicon": "2.5.0",
     "acorn": ">=5.7.4",
-    "kind-of": ">=6.0.3"
+    "kind-of": ">=6.0.3",
+    "mquery": "3.2.3"
   }
 }
