@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "acorn": ">=5.7.4",
-    "async": "2.6.1",
+    "async": "3.2.2",
     "basic-auth": "2.0.1",
     "body-parser": "1.18.3",
     "bson": ">=1.1.4",
