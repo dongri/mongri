@@ -20,7 +20,7 @@
     "mongoose": "^5.12.7",
     "morgan": "1.9.1",
     "mquery": "3.2.3",
-    "passport": "0.4.0",
+    "passport": "0.6.0",
     "passport-google-oauth2": "0.2.0",
     "serve-favicon": "2.5.0"
   }
