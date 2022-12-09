@@ -17,7 +17,7 @@
     "lodash": "^4.17.21",
     "pug": "3.0.1",
     "method-override": "3.0.0",
-    "mongoose": "^5.12.7",
+    "mongoose": "^5.13.15",
     "morgan": "1.9.1",
     "mquery": "3.2.3",
     "passport": "0.6.0",
